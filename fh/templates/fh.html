@@ -1,0 +1,27 @@
+{% load static %}
+
+{% block content %}
+
+    <center>
+        <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS HUKUM</h2>  
+    </center>
+
+    <p></p>
+    <center><img src="https://fh.untirta.ac.id/wp-content/uploads/slider1/1VISIFHUNTIRTA.jpeg" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SEJARAH FAKULTAS HUKUM</h4>
+    </center>
+    <p style="font-family: 'times new roman'">Fakultas Hukum Universitas Sultan Ageng Tirtayasa Banten berdiri tahun 1981, tepatnya pada tanggal 1 Oktober 1981 dengan status sebagai STIH Serang yan bertempat di Kresidenan Banten, Jl. K.H. Sam’un dan merupakan embrio lahirnya Universitas Sultan Ageng Tirtayasa Banten. Mulai tahun 1984, STIH Serang di integrasi sesuai dengan SK Mendikbud No. 0596/0/1984, menjadi Fakultas Hukum Universitas Sultan Ageng Tirtayasa Banten, yang bertempat di Jl. Raya Jakarta KM. 4 Pakupatan – Serang.</p>
+    <p style="font-family: 'times new roman'">Fakultas Hukum pada tahun 1994 memperoleh status terdaftar berdasarkan SK Mendikbud No. 0597/0/1984. Pada tahun 1994 Fakultas Hukum kembali memperoleh status penetapan terdaftar kembali berdasarkan SK Ditjen Pendidikan Tinggi No. 059/Dikti/Kep./1994. Pada tahun 2000 Fakultas Hukum memperoleh status terakreditasi dengan peringkat B, berdasarkan SK BAN-PT No. 19/BAN-PT/AK-IV/VIII/2000, dengan adanya SK Akreditasi tersebut maka Fakultas Hukum dapat menyelenggarakan proses pembelajaran secara mandiri.</p>
+    <p style="font-family: 'times new roman'">Pada tahun 2001 status Fakultas Hukum menjadi Fakultas Hukum dari Universitas Sultan Ageng Tirtayasa Banten dengan Status Negeri, berdasarkan Kepres No. 32/2001, hingga saat ini dan beralamat di Jl. Raya Jakarta KM. 4 Pakupatan–Serang. Saat ini  fakultas Hukum terakreditasi peringkat B berdasarkan SK. No. 186/SK/BAN-PT/Ak-SURV/S/VI/2014 tertanggal 28 Juni 2014.</p>
+    <center>
+        <h4 style="background-color: rgba(23, 26, 177, 0.43);">PROGRAM STUDI</h4>
+    </center>
+    <p>
+    {% for judul in title %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+{% block content %}
+
+    <center>
+        <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS TEKNIK</h2>  
+    </center>
+
+    <p></p>
+    <center><img src="https://ft.untirta.ac.id/wp-content/uploads/2020/07/teknik.png" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    <center>
+        <h4 style="background-color: rgba(135, 30, 30, 0.568) ;">SEJARAH FAKULTAS TEKNIK</h4>
+    </center>
+    <p style="font-family: 'times new roman'">Fakultas Teknik Untirta merupakan salah satu fakultas yang menjadi cikal bakal berdirinya Untirta. Lahirnya Fakultas Teknik berawal dari gagasan jajaran direksi dan manajemen PT. Krakatau Steel (Bapak Ir. Djoko Subagyo dan Team). Fakultas Teknik terlahir sebagai wujud cita-cita masyarakat, ulama, cendekiawan dan para pemimpin se-wilayah Banten serta dengan dukungan PT. Krakatau Steel dan industri petrokimia di kawasan industri Cilegon.</p>
+    <p style="font-family: 'times new roman'">Berdirinya Fakultas Teknik diawali dengan berdirinya Sekolah Tinggi Teknologi yang didirikan oleh PT. Krakatau Steel pada tahun 1982 dengan ijin penyelenggaraan untuk tingkat Sarjana Muda (Non Gelar) dari Kopertis Wilayah IV Jawa Barat Nomor: 040/1982. Kemudian pada tahun 1984 berdasarkan Surat Keputusan Menteri Pendidikan dan Kebudayaan RI Nomor: 0596/O/1984, Sekolah Tinggi Teknologi menggabungkan diri ke dalam Universitas Tirtayasa Banten.</p>
+    <p style="font-family: 'times new roman'">Selanjutnya pada tanggal 13 Oktober 1999 keluar Keputusan Presiden Republik Indonesia No. 130 tentang Persiapan Pendirian Universitas Negeri Sultan Ageng Tirtayasa. Dengan keluarnya Surat Keputusan Presiden Republik Indonesia Nomor 32 tanggal 19 Maret tahun 2001 maka Universitas Sultan Ageng Tirtayasa yang menaungi Fakultas Teknik menjadi Perguruan Tinggi Negeri di lingkungan Departemen Pendidikan Nasional. Sesuai dengan peralihan status Universitas Tirtayasa (semula swasta) menjadi Universitas Sultan Ageng Tirtayasa dengan status sebagai Perguruan Tinggi Negeri (PTN) di lingkungan Depdiknas, maka pola pengelolaan kelembagaan secara otomatis mengikuti semua ketentuan dari Departemen Pendidikan Nasional.</p>
+    <center>
+        <h4 style="background-color: rgba(23, 26, 177, 0.43);">PROGRAM STUDI</h4>
+    </center>
+    <p>
+    {% for judul in title %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
+{% endblock %}
