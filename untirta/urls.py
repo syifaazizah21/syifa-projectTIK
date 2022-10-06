@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from feb.views import prodifeb
+from feb.views import Feb
 from fh.views import prodifh
 from fkip.views import prodifkip
 from ft.views import prodift
@@ -25,7 +25,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('feb/', prodifeb, name="feb"),
+    path('feb/', Feb, name="feb"),
     path('fh/', prodifh, name="fh"),
     path('fkip/', prodifkip, name="fkip"),
     path('ft/', prodift, name="ft"),

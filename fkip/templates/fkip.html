@@ -1,9 +1,11 @@
+{% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
 
     <center>
-        <h2 style="background-color: rgb(38, 79, 45);">FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</h2>  
+        <h2 style="background-color: rgb(58, 219, 85);">FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</h2>  
     </center>
 
     <p></p>
@@ -24,5 +26,57 @@
         <li>{{ judul }}</li>
     {% endfor %}
     </p>
+
+    <h1>Daftar Dosen FKIP</h1>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Prodi</th>
+            <th>Fakultas</th>
+            <th>Jabatan</th>
+            <th>Foto</th>
+
+        </tr>
+
+        {% for dosen in dataDosen %}
+            <tr>
+                <td>{{ dosen.nip }}</td>
+                <td>{{ dosen.nama }}</td>
+                <td>{{ dosen.email }}</td>
+                <td>{{ dosen.prodi }}</td>
+                <td>{{ dosen.fakultas }}</td>
+                <td>{{ dosen.jabatan }}</td>
+                <td><img src="{{ dosen.foto }}" alt="foto" width="100px"></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Daftar Mahasiswa FKIP</h1>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Tanggal lahir</th>
+            <th>Email</th>
+            <th>Prodi</th>
+            <th>Fakultas</th>
+            <th>Foto</th>
+
+        </tr>
+
+        {% for mahasiswa in dataMahasiswa %}
+        <tr>
+            <td>{{ mahasiswa.nim }}</td>
+            <td>{{ mahasiswa.nama }}</td>
+            <td>{{ mahasiswa.tanggal_lahir }}</td>
+            <td>{{ mahasiswa.email }}</td>
+            <td>{{ mahasiswa.prodi }}</td>
+            <td>{{ mahasiswa.fakultas }}</td>
+            <td><img src="{{ mahasiswa.foto }}" alt="foto" width="100px"></td>
+        </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}
