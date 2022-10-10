@@ -1,0 +1,81 @@
+Table user_mahasiswa {
+  id int [pk, increment]
+  nim varchar
+  password varchar
+}
+
+Table profil_mahasiswa {
+  id int [pk, increment]
+  nama varchar
+  no_telp int
+  ttl date
+  alamat varchar
+  user_id int [ref: > user_mahasiswa.id]
+  prodi_id int [ref: > program_studi.id]
+}
+
+Table program_studi {
+  id int [pk, increment]
+  nama_prodi varchar
+  keterangan varchar
+}
+
+Table mata_kuliah {
+  id int [pk, increment]
+  kode_mata_kuliah varchar
+  nama_mata_kuliah varchar
+  user_id int [ref: > user_mahasiswa.id]
+  prodi_id int [ref: > program_studi.id]
+  dosen_id int [ref: > profil_dosen.id]
+}
+
+Table profil_dosen {
+  id int [pk, increment]
+  nama_dosen varchar
+  nip int
+  education varchar
+  courses varchar
+  prodi_id int [ref: > program_studi.id]
+}
+
+Table ruang_kelas {
+  id int [pk, increment]
+  tipe_ruangan varchar
+  fasilitas varchar
+  lokasi varchar
+  mk_id int [ref: > mata_kuliah.id]
+  gedung_id int [ref: > lokasi_gedung.id]
+}
+
+Table lokasi_gedung {
+  id int [pk, increment]
+  nama_gedung varchar
+  jenis_gedung varchar
+  lokasi_gedung varchar
+}
+
+Table kelas {
+  id int [pk, increment]
+  kode_kelas varchar
+  waktu timestamp
+  jenis_mata_kuliah varchar
+  dosen varchar
+  user_id int [ref: > user_mahasiswa.id]
+}
+
+Table nilai {
+  id int [pk, increment]
+  nim int
+  semester int
+  kode_kelas varchar
+  sks int
+  user_id int [ref: > user_mahasiswa.id]
+  mk_id int [ref: > mata_kuliah.id]
+}
+
+Table tagihan {
+  jumlah_tagihan varchar
+  tanggal_angsuran date
+  tanggal_bayar date
+  user_id int [ref: > user_mahasiswa.id]
+}
